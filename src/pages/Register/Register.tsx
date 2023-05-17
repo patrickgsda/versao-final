@@ -9,16 +9,6 @@ import { toast } from "react-toastify";
 import Lottie from "react-lottie";
 import registerAnimation from "./imgs/register.json";
 
-interface UserData {
-  email: string;
-  password: string;
-  confirmPassword: string;
-  phone: string;
-  oab: string;
-  state: string;
-  username: string;
-}
-
 const Register = () => {
   const navigate = useNavigate();
   const lottieOptions = {
@@ -45,14 +35,14 @@ const Register = () => {
     };
 
     localStorage.setItem("user", JSON.stringify(newData));
-      toast.success("Conta criada com sucesso!");
-      setTimeout(() => navigate("/login"), 2000);
+    toast.success("Conta criada com sucesso!");
+    setTimeout(() => navigate("/login"), 2000);
   };
 
   return (
     <>
       <Container>
-      <Lottie options={lottieOptions} height={400} width={400} />{" "}
+        <Lottie options={lottieOptions} height={400} width={400} />{" "}
         <FormContainer>
           <h1>Cadastro</h1>
           <form onSubmit={handleSubmit(createUser)}>
@@ -63,7 +53,7 @@ const Register = () => {
               type="text"
               maxLength={15}
               register={register}
-              error={errors.name?.message}
+              error={`${errors.name?.message}`}
             />
             <Input
               data-cy="email/register"
@@ -71,7 +61,7 @@ const Register = () => {
               name="email"
               type="email"
               register={register}
-              error={errors.email?.message}
+              error={`${errors.email?.message}`}
             />
             <Input
               data-cy="password/register"
@@ -79,7 +69,7 @@ const Register = () => {
               name="password"
               type="password"
               register={register}
-              error={errors.password?.message}
+              error={`${errors.password?.message}`}
             />
             <Input
               data-cy="confirmpassword/register"
@@ -87,16 +77,11 @@ const Register = () => {
               name="confirmPassword"
               type="password"
               register={register}
-              error={errors.confirmPassword?.message}
+              error={`${errors.confirmPassword?.message}`}
             />
-              <Button
-                fullWidth
-                color="primary"
-                variant="contained"
-                type="submit"
-              >
-                Registrar
-              </Button>
+            <Button fullWidth color="primary" variant="contained" type="submit">
+              Registrar
+            </Button>
             <p>
               Já possui um cadastro? <Link to="/login">faça seu login</Link>
             </p>

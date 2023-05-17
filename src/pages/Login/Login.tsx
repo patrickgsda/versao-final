@@ -1,11 +1,5 @@
-import React, { useState } from "react";
-import {
-  TextField,
-  Button,
-  Container,
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { useState } from "react";
+import { TextField, Button, Container, Grid } from "@material-ui/core";
 import Lottie from "react-lottie";
 import loginAnimation from "./imgs/login.json";
 import { useNavigate } from "react-router-dom";

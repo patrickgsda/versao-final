@@ -1,4 +1,3 @@
-import React from "react";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 

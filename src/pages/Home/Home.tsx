@@ -1,4 +1,3 @@
-import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Lottie from "react-lottie";
 import groovyWalkAnimation from "./imgs/groovy-walk-cycle.json";
@@ -31,9 +30,7 @@ const Home = () => {
         <Typography variant="h6">
           Esse trabalho foi feito com muito carinho e dedicação.
         </Typography>
-        <Typography variant="h6">
-          Espero que goste! ❤️
-        </Typography>
+        <Typography variant="h6">Espero que goste! ❤️</Typography>
       </div>
     </div>
   );

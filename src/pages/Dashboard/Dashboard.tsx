@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Lottie from "react-lottie";
 import unlockAnimation from "./imgs/unlock.json";
 import { Button, Container, Typography } from "@material-ui/core";
@@ -31,7 +31,7 @@ const Dashboard = () => {
         fullWidth
         color="primary"
         variant="contained"
-        onClick={() => window.location.href = "/login"}
+        onClick={() => (window.location.href = "/login")}
       >
         Sair
       </Button>
